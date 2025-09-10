@@ -53,7 +53,8 @@ export  const versionCompare = async () => {
       needsUpdate: false,
       updateType: null,
       notice: "Error: could not get latest version",
-      storeUrl
+      storeUrl,
+      currentVersion,
     };
   }
 
@@ -62,7 +63,8 @@ export  const versionCompare = async () => {
     return {
       needsUpdate: !!updateType,
       updateType,
-      storeUrl
+      storeUrl,
+      currentVersion,
     };
 
   } catch (e) {

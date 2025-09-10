@@ -30,7 +30,7 @@ const getAppVersion = async (bundleId) => {
 export  const versionCompare = async () => {
 
   const bundleID = NSBundle.mainBundle.bundleIdentifier;
-  const currentVersion =  NSBundle.mainBundle.infoDictionary.objectForKey("CFBundleVersion");
+  const currentVersion =  NSBundle.mainBundle.infoDictionary.objectForKey("CFBundleShortVersionString");
   const {version:latestVersion, storeUrl } = await getAppVersion(bundleID)
 
   if (!latestVersion) {

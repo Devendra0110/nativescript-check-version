@@ -1,4 +1,5 @@
 
+import { Utils } from "@nativescript/core";
 import {diffLoose} from "./version-check.js"
 
 const getAppVersion = async (bundleId) => {
@@ -41,9 +42,10 @@ const getAppVersion = async (bundleId) => {
 
 
 export  const versionCompare = async () => {
-  const bundleID = Application.android.context.getPackageName();
-  var packageManager = Application.android.context.getPackageManager();
-  const currentVersion =  packageManager.getPackageInfo(Application.android.context.getPackageName(), 0).versionName;
+  const context = Utils.android.getApplicationContext()
+  const bundleID = context.getPackageName();
+  var packageManager = context.getPackageManager();
+  const currentVersion =  packageManager.getPackageInfo(context.getPackageName(), 0).versionName;
   const {version:latestVersion, storeUrl } = await getAppVersion(bundleID)
 
   if (!latestVersion) {

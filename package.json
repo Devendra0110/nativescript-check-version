@@ -1,13 +1,12 @@
 {
   "name": "nativescript-check-version",
-  "version": "1.0.0",
+  "version": "2.0.1",
   "description": "An easy way to check if there's an update available for the current app in the App Store or Google Play.",
   "main": "index",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublish": "npm run build"
-
   },
   "repository": {
     "type": "git",
@@ -33,9 +32,11 @@
   },
   "homepage": "https://github.com/Devendra0110/nativescript-check-version#readme",
   "dependencies": {
+    "nativescript-check-version": "^1.0.0",
     "semver": "^7.7.2"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.29.6",
     "@nativescript/core": "^8.9.1-rc.0",
     "@types/semver": "^7.7.1"
   }

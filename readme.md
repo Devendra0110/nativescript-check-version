@@ -109,7 +109,7 @@ checkForUpdates();
 
 ## Contributing
 
-Contributions are welcome! Please submit a pull request or open an issue on the [GitHub repository](https://github.com/your-repo/nativescript-check-version).
+Contributions are welcome! Please submit a pull request or open an issue on the [GitHub repository](https://github.com/Devendra0110/nativescript-check-version).
 
 ## License
 
